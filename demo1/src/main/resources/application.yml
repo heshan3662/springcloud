@@ -1,0 +1,39 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8762
+spring:
+  application:
+    name: service-hi
+#    jdbctemplate 连接多数据源配置
+  mysql:
+    datasource:
+      jdbcurl: jdbc:mysql://127.0.0.1:3306/commonDB?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+  sqlserver:
+    datasource:
+      jdbcurl: jdbc:mysql://127.0.0.1:3306/guideir?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+#    mybatise 连接多数据源配置
+  mysql-mybatise:
+    datasource:
+      jdbcurl: jdbc:mysql://127.0.0.1:3306/commonDB?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+  sqlserver-mybatise:
+    datasource:
+      jdbcurl: jdbc:mysql://127.0.0.1:3306/guideir?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource

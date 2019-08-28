@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ <mapper namespace="com.example.demo.mybatise.dao.MysqlMapper">
+<!--    <resultMap id="Users" type="com.example.demo.mybatise.entity.Users"></resultMap>-->
+<!--    懒人写法  resultType="java.util.HashMap" -->
+    <select id="getUser" parameterType="java.lang.Long"
+    resultType="java.util.HashMap">
+        SELECT * FROM gd_user WHERE id = #{id}
+    </select>
+
+    <update id="updateUser">
+        update gd_user set  department_id = 2  where id=#{id}
+    </update>
+</mapper>
